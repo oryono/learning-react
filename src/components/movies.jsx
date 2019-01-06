@@ -6,6 +6,7 @@ import { getGenres } from "../services/fakeGenreService";
 import ListGroup from "../components/reusable/LiistGroup";
 import MoviesTable from "./MoviesTable";
 import _ from "lodash";
+import { Link } from "react-router-dom";
 
 class Movies extends Component {
   state = {
@@ -92,6 +93,9 @@ class Movies extends Component {
             />
           </div>
           <div className="col">
+            <Link to="movies/new" className="btn btn-info">
+              New Movie
+            </Link>
             <h4 className="p-3">
               Showing {totalCount} movies in the database.
             </h4>
